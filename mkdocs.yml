@@ -1,0 +1,67 @@
+site_name: MDR Security Analysis Portfolio
+site_description: Curated incident analysis reports — anonymized technical writeups from real-world MDR/SOC operations.
+site_author: MDR Analyst
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: zh-TW
+  palette:
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: 切換至淺色模式
+    - scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: 切換至深色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: zh
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 首頁: index.md
+  - 事件報告:
+    - 報告索引: reports/index.md
+    - 假冒 ChatGPT 釣魚網站（2026-05）: reports/phishing-2026-05.md
+  - 關於此作品集: meta/about.md
+  - 免責聲明: meta/disclaimer.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YOUR_GITHUB_USERNAME
+
+copyright: "All reports are anonymized. No client-identifiable information is included."
